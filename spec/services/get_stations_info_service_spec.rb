@@ -10,8 +10,10 @@ describe GetStationsInfoService  do
 
     station = stations.first 
 
-    expect(stations.count).to eq(20)
+    expect(stations.count).to eq(10)
     expect(station.fuel_type_code).to eq("ELEC")
-    expect(station.station_name).to eq("A random name")
+    expect(station.station_name).to eq("UDR")
+    expect(station.distance).to eq(0.31422)
+    expect(station.street_address).to eq("800 Acoma St")
   end
 end
