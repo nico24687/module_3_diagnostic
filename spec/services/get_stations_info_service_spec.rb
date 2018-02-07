@@ -12,5 +12,6 @@ describe GetStationsInfoService  do
 
     expect(stations.count).to eq(20)
     expect(station.fuel_type_code).to eq("ELEC")
+    expect(station.station_name).to eq("A random name")
   end
 end

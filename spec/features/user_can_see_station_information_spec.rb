@@ -15,7 +15,10 @@ describe "user searches by a particulalr zipcode" do
     expect(current_path).to eq(search_path)
     expect(page).to have_content("count: 20")
     expect(page).to have_content("energy type: ELEC")
-    # expect(page).to have_content("hours: Never enter")
+    expect(page).to have_content("hours: 24 hours daily")
+    expect(page).to have_content("name: UDR")
+    expect(page).to have_content("address: 800 Acoma St")
+    expect(page).to have_content("distance: a random distance")
   end
 end
 
