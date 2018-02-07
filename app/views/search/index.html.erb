@@ -1,13 +1,33 @@
-<h1> count: <%= @stations.count %> </h1>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+          <h1> count: <%= @stations.count %> </h1>
+        </div>
+    </div>
+</div>
 
 
 
-<% @stations.each do |station| %>
-  <p>
-  name: <%= station.station_name %>
-  address: <%= station.street_address %>
-  hours: <%= station.access_days_time %>
-  energy type: <%= station.fuel_type_code %>
-  distance: <%= station.distance %>
-  </p>
-<% end %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+
+          <% @stations.each do |station| %>
+            <p>
+            name: <%= station.station_name %> ||
+            address: <%= station.street_address %> ||
+            hours: <%= station.access_days_time %> ||
+            energy type: <%= station.fuel_type_code %> ||
+            distance: <%= station.distance %> 
+            </p>
+          <% end %>
+
+        
+        
+        </div>
+    </div>
+</div>
+
