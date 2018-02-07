@@ -18,7 +18,7 @@ describe "user searches by a particulalr zipcode" do
     expect(page).to have_content("hours: 24 hours daily")
     expect(page).to have_content("name: UDR")
     expect(page).to have_content("address: 800 Acoma St")
-    expect(page).to have_content("distance: a random distance")
+    expect(page).to have_content("distance: 0.31422")
   end
 end
 
