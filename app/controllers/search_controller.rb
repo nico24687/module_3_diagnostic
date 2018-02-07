@@ -1,5 +1,5 @@
 class SearchController < ApplicationController 
   def index
-    @stations = GetStationInfoService.new.perform(params[:q])
+    @stations = GetStationsInfoService.new.perform(params[:q])
   end
 end
