@@ -3,7 +3,7 @@ require 'rails_helper'
 
 
 describe "user searches by a particulalr zipcode" do 
-  it "sees th infomration about those stations in that zipcode" do 
+  it "sees the infomration about those stations in that zipcode" do 
     visit "/"
 
     fill_in "q", with: 80203
@@ -13,7 +13,7 @@ describe "user searches by a particulalr zipcode" do
     end
 
     expect(current_path).to eq(search_path)
-    expect(page).to have_content("count: 20")
+    expect(page).to have_content("count: 10")
     expect(page).to have_content("energy type: ELEC")
     expect(page).to have_content("hours: 24 hours daily")
     expect(page).to have_content("name: UDR")
