@@ -10,9 +10,9 @@ describe "user searches by a particulalr zipcode" do
     click_on "Locate"
 
     expect(current_path).to eq(search_path)
-    expect(page).to have_content("count: 10")
+    expect(page).to have_content("count: 3")
     expect(page).to have_content("energy type: Wind")
-    expect(page).to have_content("hours: Never enter")
+    # expect(page).to have_content("hours: Never enter")
   end
 end
 
