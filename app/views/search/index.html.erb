@@ -1,0 +1,6 @@
+count: <%= stations.count %>
+
+<% @stations.each do |station| %>
+  energy type: <%= station.fuel_type_code %>
+  hours: <%= station.access_days_time %>
+<% end %>
