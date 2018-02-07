@@ -7,11 +7,14 @@ describe "user searches by a particulalr zipcode" do
     visit "/"
 
     fill_in "q", with: 80203
-    click_on "Locate"
+
+    VCR.use_cassette("services/get_stations_info_service") do
+      click_on "Locate"
+    end
 
     expect(current_path).to eq(search_path)
-    expect(page).to have_content("count: 3")
-    expect(page).to have_content("energy type: Wind")
+    expect(page).to have_content("count: 20")
+    expect(page).to have_content("energy type: ELEC")
     # expect(page).to have_content("hours: Never enter")
   end
 end

@@ -6,7 +6,7 @@ class GetStationsInfoService
 
     body = JSON.parse(response.body)
 
-    body["fuel_stations".map do |station]
+    body["fuel_stations"].map do |station|
       Station.new(station)
     end
 
